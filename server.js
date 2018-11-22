@@ -45,7 +45,11 @@ app.get('/about', (req,res) => {
     });
 })
 
-//render home.hbs at /, pass in a welcome message
+app.get('/projects', (req,res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects'
+    })
+})
 
 app.get('/bad', (req,res) => {
     res.send({
